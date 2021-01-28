@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:youth_counsellor/assets/fontAsset.dart';
-import 'package:youth_counsellor/screens/SignUpScreen/signUpWidgets/signUpTextFields.dart';
+import 'package:youth_counsellor/widgets/sign_up_textFields.dart';
 
-class SignUpScreen extends StatelessWidget {
-  SignUpScreen({Key key}) : super(key: key);
+class SignUpPage extends StatelessWidget {
+  SignUpPage({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Color backgroungColor = Theme.of(context).primaryColor;
     return Scaffold(
       backgroundColor: backgroungColor,
-      body: SingleChildScrollView(child: _buildContent(context)),
+      body: SingleChildScrollView(
+        child: _buildContent(context),
+      ),
     );
   }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:youth_counsellor/assets/fontAsset.dart';
 import 'package:youth_counsellor/assets/textFieldDecoration.dart';
-import 'package:youth_counsellor/screens/SignUpScreen/signUpWidgets/signUpTextFields.dart';
+import 'package:youth_counsellor/utilities/validator.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
