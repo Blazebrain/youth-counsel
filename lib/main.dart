@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youth_counsellor/assets/fontAsset.dart';
-import 'package:youth_counsellor/generalWidget/textField.dart';
 import 'package:youth_counsellor/screens/SignUpScreen/signUpScreen.dart';
-import 'package:youth_counsellor/screens/SignUpScreen/signUpWidgets/signUpTextFields.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +14,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-

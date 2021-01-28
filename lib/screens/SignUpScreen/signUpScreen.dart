@@ -9,39 +9,40 @@ class SignUpScreen extends StatelessWidget {
     Color backgroungColor = Theme.of(context).primaryColor;
     return Scaffold(
       backgroundColor: backgroungColor,
-      body:  _buildContent(context),
+      body: SingleChildScrollView(child: _buildContent(context)),
     );
   }
 
   Widget _buildContent(BuildContext context) {
     double deviceHeight = MediaQuery.of(context).size.height;
 
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          SingleChildScrollView(
-            child: Container(
-              padding: EdgeInsets.symmetric( horizontal: 10),
-              alignment: Alignment.centerLeft,
-              height: deviceHeight * 0.2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('welcome', style: FontAsset.title),
-                  Text(
-                    'Sign Up',
-                    style: FontAsset.unknownFont
-                        .copyWith(fontSize: 40, color: Colors.white),
-                  ),
-                ],
-              ),
+    return Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+      SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 35, vertical: 15),
+          alignment: Alignment.centerLeft,
+          height: deviceHeight * 0.25,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Welcome', style: FontAsset.welcomeTitle),
+                Text(
+                  'Sign Up',
+                  style: FontAsset.unknownFont.copyWith(
+                      fontSize: 40,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
             ),
           ),
-
-
-                  SignUpTextFields( deviceHeight - (deviceHeight * 0.28),),
-
+        ),
+      ),
+      SignUpTextFields(
+        deviceHeight - (deviceHeight * 0.25),
+      ),
     ]);
   }
 }

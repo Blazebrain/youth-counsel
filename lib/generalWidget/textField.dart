@@ -43,7 +43,7 @@ class CustomTextField extends StatelessWidget {
             ),
           ),
           Container(
-            height: 70,
+            height: 60,
             padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
             child: TextFormField(
               obscureText: isPassword,
